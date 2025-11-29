@@ -1,0 +1,24 @@
+live_config_reload: true
+
+dynamic_title: true
+
+
+shell:
+  program: /usr/bin/zsh
+  args:
+    - --login
+
+key_bindings:
+  - { key: C, mods: Control, action: Copy }
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Shift|Control, action: SendKey, chars: "\x03" } # SIGINT
+
+
+search:
+  regex: true
+  case_sensitive: false
+
+
+key_bindings:
+  - { key: F, mods: Control, action: SearchForward }
+  - { key: R, mods: Control, action: SearchBackward }

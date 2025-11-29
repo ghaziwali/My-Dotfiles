@@ -1,0 +1,40 @@
+/* --------------------------------------------------------------------------
+ * Rofi Configuration (Set Modes, Layout, and Behavior)
+ * -------------------------------------------------------------------------- */
+configuration {
+modi: "drun,calc";
+    drun-display-format: "{icon} {name}";
+        terminal: "alacritty";
+    run-shell-command: "{terminal} -e {cmd}";
+
+    location: 0; 
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  Apps ";
+    display-calc: " 🖩 Calc ";
+    sidebar-mode: true;
+} 
+/* Line 17 is likely here or near here, where the @theme was previously located */
+
+/* --------------------------------------------------------------------------
+ * Theme Import and Accent Overrides (MUST be outside configuration {})
+ * -------------------------------------------------------------------------- */
+
+/* 1. Apply the Catppuccin default template as the main theme */
+@theme "catppuccin-default"
+
+/* 2. Import the Macchiato color palette (this is allowed anywhere) */
+@import "catppuccin-macchiato"
+
+/* 3. Override the theme's internal 'accent' variable to use the '@blue' color */
+* {
+    accent: @blue; 
+}
+
+/* 4. Custom window geometry override */
+window {
+    width: 600px;
+    border: 2px;
+    border-color: @accent; 
+    border-radius: 5px;
+}

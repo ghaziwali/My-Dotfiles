@@ -1,0 +1,47 @@
+[general]
+live_config_reload = true
+import = [
+  # uncomment the flavour you want below:
+  #"~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+   "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["--login"]
+
+
+[window]
+dynamic_title= true
+#decorations = "None"
+opacity = 0.85  # optional, if you want transparency
+blur = true     # optional, KDE Wayland only
+dimensions = { columns = 150, lines = 35 }  # adjust to fit 1350x700px
+
+
+[keyboard]
+bindings = [
+  { key = "C", mods = "Control", action = "Copy" },
+  { key = "V", mods = "Control", action = "Paste" },
+  { key = "C", mods = "Control|Shift", chars = "\u0003" }, # SIGINT
+  { key = "F", mods = "Control", action = "SearchForward" },
+  { key = "R", mods = "Control", action = "SearchBackward" }
+]
+
+
+[font]
+size = 11.5 # Adjust size as needed
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[window.padding]
+x = 4
+y = 4
